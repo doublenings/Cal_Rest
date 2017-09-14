@@ -23,18 +23,16 @@ app.post('/calculator/rest/plus', function(req, res, next) {
     }
      res.json(object);
     });
-    app.post('/calculator/rest/minus', function(req, res, next) {
-        var body=  req.body; 
-        var x = body.x;
-        var y = body.y;
-        var result = 0;
-        var obj = {
-            "x": x,
-            "y": y,
-            "result": x - y
-        }
-      res.json(obj); 
-     });
+    app.post('/calculator/rest/cmtoinch', function (req, res, next) {
+    var body = req.body;  
+	var cm = body.x;
+	var result =0;
+	var object ={
+		"cm": cm,
+		"result": cm*0.3937007874
+	}
+    res.json(object); 
+});
       app.post('/calculator/rest/kbtotb', function(req, res, next) {
        var body=  req.body; 
        var x = body.x;
